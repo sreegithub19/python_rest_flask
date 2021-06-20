@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 from sqlalchemy import create_engine
 from json import dumps
+import webbrowser
 
 db_connect = create_engine('sqlite:///chinook.db')
 app = Flask(__name__)
@@ -172,6 +173,7 @@ def run_code_1():
     </ul> </div> \
         </div> </body> </html>"
 
+webbrowser.open('http://127.0.0.1:5000/')
 if __name__ == '__main__':
         app.run()
 
